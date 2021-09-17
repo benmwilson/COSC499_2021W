@@ -35,7 +35,12 @@ public class ex1 {
 			}
 
 		} else if (c == 2) {
-			
+			Arrays.sort(words);
+
+			System.out.println("Your sorted list of Strings: ");
+			for (int i = 0; i < words.length; i++) {
+				System.out.println(words[i]);
+			}
 		}
 
 	}
