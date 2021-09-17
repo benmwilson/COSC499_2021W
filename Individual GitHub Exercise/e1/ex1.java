@@ -23,6 +23,7 @@ public class ex1 {
 			sortInt(words);
 
 		} else if (c == 2) {
+
 			words = sortString(words);
 			System.out.println("Your sorted list of Strings: ");
 			for (int i = 0; i < words.length; i++) {
@@ -49,9 +50,13 @@ public class ex1 {
 
 	}
 
+
 	public static String[] sortString(String[] a) {
 		Arrays.sort(a);
 		return a;
 	}
 
+
 }
+
+
