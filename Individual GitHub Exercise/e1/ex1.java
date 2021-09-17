@@ -23,7 +23,12 @@ public class ex1 {
 			sortInt(words);
 
 		} else if (c == 2) {
-			sortString(words);
+
+			words = sortString(words);
+			System.out.println("Your sorted list of Strings: ");
+			for (int i = 0; i < words.length; i++) {
+				System.out.println(words[i]);
+			}
 		}
 
 	}
@@ -45,14 +50,13 @@ public class ex1 {
 
 	}
 
-	public static void sortString(String[] a) {
-		Arrays.sort(a);
 
-		System.out.println("Your sorted list of Strings: ");
-		for (int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);
-		}
+	public static String[] sortString(String[] a) {
+		Arrays.sort(a);
+		return a;
 	}
 
+
 }
+
 
