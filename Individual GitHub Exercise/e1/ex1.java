@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ex1 {
+	
+	// This program will sort your arrays of integers and strings like its magic!
 
 	public static void main(String[] args) {
 
@@ -20,15 +22,23 @@ public class ex1 {
 		String words[] = ss.split(" ");
 
 		if (c == 1) {
-			sortInt(words);
+			int[] nums = sortInt(words);
+			System.out.println("Your sorted list of Integers: ");
+			for (int i = 0; i < nums.length; i++) {
+				System.out.println(nums[i]);
+			}
 
 		} else if (c == 2) {
-			sortString(words);
+			words = sortString(words);
+			System.out.println("Your sorted list of Strings: ");
+			for (int i = 0; i < words.length; i++) {
+				System.out.println(words[i]);
+			}
 		}
 
 	}
 
-	public static void sortInt(String[] a) {
+	public static int[] sortInt(String[] a) {
 
 		int[] myIntArray = new int[a.length];
 
@@ -37,21 +47,13 @@ public class ex1 {
 		}
 
 		Arrays.sort(myIntArray);
-
-		System.out.println("Your sorted list of Integers: ");
-		for (int i = 0; i < myIntArray.length; i++) {
-			System.out.println(myIntArray[i]);
-		}
+		return myIntArray;
 
 	}
 
-	public static void sortString(String[] a) {
+	public static String[] sortString(String[] a) {
 		Arrays.sort(a);
-
-		System.out.println("Your sorted list of Strings: ");
-		for (int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);
-		}
+		return a;
 	}
 
 }
