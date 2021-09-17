@@ -19,24 +19,40 @@ public class ex1 {
 
 		String words[] = ss.split(" ");
 
-		
 		if (c == 1) {
-			int[] myIntArray = new int[words.length];
-
-			for (int i = 0; i < words.length; i++) {
-				myIntArray[i] = Integer.parseInt(words[i]);
-			}
-
-			Arrays.sort(myIntArray);
-
-			System.out.println("Your sorted list of Integers: ");
-			for (int i = 0; i < words.length; i++) {
-				System.out.println(myIntArray[i]);
-			}
+			sortInt(words);
 
 		} else if (c == 2) {
-			
+			sortString(words);
 		}
 
 	}
+
+	public static void sortInt(String[] a) {
+
+		int[] myIntArray = new int[a.length];
+
+		for (int i = 0; i < a.length; i++) {
+			myIntArray[i] = Integer.parseInt(a[i]);
+		}
+
+		Arrays.sort(myIntArray);
+
+		System.out.println("Your sorted list of Integers: ");
+		for (int i = 0; i < myIntArray.length; i++) {
+			System.out.println(myIntArray[i]);
+		}
+
+	}
+
+	public static void sortString(String[] a) {
+		Arrays.sort(a);
+
+		System.out.println("Your sorted list of Strings: ");
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
+	}
+
 }
+
